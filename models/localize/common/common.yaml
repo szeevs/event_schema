@@ -1,0 +1,33 @@
+additionalProperties: false
+description: The common object that is used across all events.
+properties:
+  event_id:
+    description: The universally unique id of the entire event.
+    maxLength: 200
+    type: string
+  event_timestamp:
+    description: The timestamp the event occurred. Must be of format 'YYYY-MM-DD HH:MM:SS'.
+    format: redshift_datetime
+    type: string
+  secondary_user_id:
+    description: The secondary user id to link user behavior across different mediums and sessions. This is equivalent to a tracking id.
+    maxLength: 300
+    type: string
+  secondary_user_id_type:
+    description: The type of secondary user id.
+    enum:
+      - web
+      - mobile
+    maxLength: 100
+    type: string
+  user_id:
+    description: The universally unique id of the user internal to Madlan/Localize.
+    maxLength: 200
+    type: string
+required:
+  - event_id
+  - event_timestamp
+  - secondary_user_id
+  - secondary_user_id_type
+title: common
+type: object

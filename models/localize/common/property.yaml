@@ -1,0 +1,26 @@
+additionalProperties: false
+description: Contains the property details of a page. Property details are information related to the for sale or for rent details of a location.
+properties:
+  deal_type:
+    description: Whether the property is for sale or for rent.
+    enum:
+      - for_sale
+      - for_rent
+    maxLength: 50
+    type: string
+  property_id:
+    description: An internal property identifier.
+    maxLength: 200
+    type: string
+  price:
+    description: The price of a house or apartment if it is for sale or the price of a house or apartment per month if it is for rent.
+    format: int32
+    type: integer
+  rooms:
+    description: The amount of rooms in the property.
+    type: number
+required:
+  - deal_type
+  - property_id
+title: property
+type: object

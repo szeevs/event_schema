@@ -1,0 +1,32 @@
+additionalProperties: false
+description: Information associated with the user's browser.
+properties:
+  browser_language:
+    description: The language of the browser that sent the event.
+    maxLength: 100
+    type: string
+  browser_viewheight:
+    description: The height of the browser that sent the event.
+    type: number
+  browser_viewwidth:
+    description: The width of the browser that sent the event.
+    type: number
+  page_referrer:
+    description: The referrer URL of the referrer of the page that sent the event.
+    maxLength: 6000
+    type: string
+  page_type:
+    $ref: ./page_type.yaml
+  page_url:
+    description: The URL of the page that sent the event.
+    maxLength: 6000
+    type: string
+required:
+  - browser_language
+  - browser_viewheight
+  - browser_viewwidth
+  - page_referrer
+  - page_type
+  - page_url
+title: browser
+type: object

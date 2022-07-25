@@ -1,0 +1,25 @@
+additionalProperties: false
+description: Information associated with the user's device.
+properties:
+  dvce_screenheight:
+    description: The height of the device screen in pixels.
+    type: number
+  dvce_screenwidth:
+    description: The width of the device screen in pixels.
+    type: number
+  os_timezone:
+    description: The timezone of the operating system on the user device.
+    maxLength: 40
+    type: string
+  ui_layout:
+    description: The website layout that the client decides to use.
+    enum:
+      - large_desktop
+      - mobile
+      - small_desktop
+      - tablet_landscape
+      - tablet_portrait
+    maxLength: 30
+    type: string
+title: device
+type: object

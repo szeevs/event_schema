@@ -1,0 +1,24 @@
+allOf:
+  - $ref: ../common/core_event.yaml
+  - description: The core event from which all property events inherit from.
+    properties:
+      browser:
+        $ref: ../common/browser.yaml
+      device:
+        $ref: ../common/device.yaml
+      event_category:
+        description: The category of the event.
+        enum:
+          - property
+        type: string
+      platform:
+        $ref: ../common/platform.yaml
+      property:
+        $ref: ../common/property.yaml
+    required:
+      - browser
+      - device
+      - event_category
+      - platform
+      - property
+    type: object

@@ -1,0 +1,37 @@
+allOf:
+  - $ref: ./property_event.yaml
+  - description: The event is fired every time a property is viewed.
+    properties:
+      event:
+        additionalProperties: false
+        properties:
+          source:
+            description: The source of the property view.
+            enum:
+              - agent
+              - address_near_by
+              - building_details
+              - direct
+              - favorites
+              - feed
+              - feed_story
+              - homepage_persona
+              - homepage_projects
+              - latest_listings
+              - list
+              - map
+              - section_list
+              - similar_listings
+            type: string
+        required:
+          - source
+        type: object
+      event_action:
+        description: The action of the event.
+        enum:
+          - property_view
+        type: string
+    required:
+      - event_action
+      - event
+    type: object

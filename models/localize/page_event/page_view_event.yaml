@@ -1,0 +1,12 @@
+allOf:
+  - $ref: ./page_event.yaml
+  - description: The event is fired every time a URI changes but not when query params are added to a URL.
+    properties:
+      event_action:
+        description: The action of the event.
+        enum:
+          - page_view
+        type: string
+    required:
+      - event_action
+    type: object

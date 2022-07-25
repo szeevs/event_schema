@@ -1,0 +1,33 @@
+additionalProperties: false
+description: Information associated with the software platform sending the data to BI.
+properties:
+  app_name:
+    description: The name of the application that sent the event.
+    enum:
+      - my_app_1
+      - my_web_1
+      - my_web_2
+    maxLength: 50
+    type: string
+  client_version:
+    description: The client version of the application platform.
+    maxLength: 50
+    type: string
+  platform:
+    description: The platform the event originated from.
+    enum:
+      - web
+      - mobile
+    maxLength: 20
+    type: string
+  tracker_version:
+    description: The version of the software that sends events to this event tracking system.
+    maxLength: 50
+    type: string
+required:
+  - app_name
+  - client_version
+  - platform
+  - tracker_version
+title: platform
+type: object

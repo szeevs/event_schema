@@ -1,0 +1,7 @@
+description: The type of the page
+enum:
+  - home_page
+  - landing_page
+  - local_page
+maxLength: 50
+type: string

@@ -1,0 +1,7 @@
+description: The core event from which all other events inherit from.
+properties:
+  common:
+    $ref: ./common.yaml
+required:
+  - common
+type: object
