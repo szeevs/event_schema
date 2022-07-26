@@ -1,0 +1,23 @@
+swagger: '2.0'
+info:
+  title: 'events api for localize.city'
+  description: 'events api for the prod environment.'
+  contact:
+    name: Zeev
+    email: zeevs@madlan.co.il
+  version: '1_0_0'
+host: 'www.localize.city'
+basePath: /v1
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  $ref: ./index.yaml
+x-tagGroups:
+  - name: Event Categories
+    tags:
+      - Page
+      - Property

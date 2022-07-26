@@ -1,0 +1,17 @@
+property_view_path:
+  post:
+    summary: Property view event
+    description: The event is fired every time a property is viewed.
+    tags:
+      - Property
+    x-swagger-router-controller: event_api_methods
+    operationId: property_event_methods.property_view
+    parameters:
+      - name: body
+        in: body
+        description: Property view event
+        required: true
+        schema:
+          $ref: ./property_event/property_view_event.yaml
+    responses:
+      $ref: ./standard_responses.yaml

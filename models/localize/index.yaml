@@ -1,0 +1,4 @@
+/page/page_view:
+  $ref: ./page_paths.yaml#/page_view_path
+/property/property_view:
+  $ref: ./property_paths.yaml#/property_view_path

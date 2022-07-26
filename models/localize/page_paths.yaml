@@ -1,0 +1,17 @@
+page_view_path:
+  post:
+    summary: Page view event
+    description: The event is fired every time a URI changes but not when query params are added to a URL.
+    tags:
+      - Page
+    x-swagger-router-controller: event_api_methods
+    operationId: page_event_methods.page_view
+    parameters:
+      - name: body
+        in: body
+        description: Page view event
+        required: true
+        schema:
+          $ref: ./page_event/page_view_event.yaml
+    responses:
+      $ref: ./standard_responses.yaml

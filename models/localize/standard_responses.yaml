@@ -1,0 +1,42 @@
+'200':
+  description: A valid payload was received by the API.
+'400':
+  description: The request was invalid or cannot be otherwise served. An accompanying error message will explain further.
+  schema:
+    properties:
+      detail:
+        description: A human readable explanation specific to the occurrence of the problem.
+        type: string
+      status:
+        enum:
+          - 400
+        type: integer
+      title:
+        enum:
+          - Bad Request
+        type: string
+      type:
+        enum:
+          - application/json
+        type: string
+    type: object
+'500':
+  description: Something is broken with data engineering / BI infrastructure or code.
+  schema:
+    properties:
+      detail:
+        description: 'A simple static message. For a more detailed stack trace, please see Kibana, application logs, or CloudWatch logs.'
+        type: string
+      status:
+        enum:
+          - 500
+        type: integer
+      title:
+        enum:
+          - Internal Server Error
+        type: string
+      type:
+        enum:
+          - application/json
+        type: string
+    type: object
